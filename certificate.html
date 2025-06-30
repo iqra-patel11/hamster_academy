@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hamster Academy - Certificate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>🐹 Hamster Academy</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main class="certificate-container">
+    <h1>🎉 Well Done!</h1>
+    <p>You’ve completed all lessons and passed the quizzes!</p>
+    <button onclick="viewCertificate()">View Your Certificate</button>
+  </main>
+
+  <script>
+    function viewCertificate() {
+      const scores = JSON.parse(localStorage.getItem("quizScores"));
+      const name = localStorage.getItem("hamsterUser");
+
+      if (!scores || scores.attempted < 3 || !name) {
+        alert("You need to complete all quizzes to unlock the certificate.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      window.location.href = "view-certificate.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("hamsterUser");
+      localStorage.removeItem("quizScores");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

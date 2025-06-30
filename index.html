@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamster Academy - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>🐹 Hamster Academy</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <h1 class="welcome" id="welcomeText">Welcome!</h1>
+
+    <div id="lessonsContainer">
+      <!-- Lessons will be generated dynamically -->
+    </div>
+  </main>
+
+  <section class="summary" id="summary">
+    <h2>📊 Quiz Score Summary</h2>
+    <p id="scoreText">Loading...</p>
+  </section>
+
+  <div id="congratsPopup" class="congrats-popup hidden">
+    🎉 Congratulations! You've completed all quizzes!
+    <button onclick="goToCertificate()">View Certificate</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

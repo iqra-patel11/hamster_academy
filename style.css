@@ -1,0 +1,231 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f2f4fc, #ffffff);
+  color: #333;
+  padding-bottom: 5rem;
+}
+
+/* === Header === */
+header {
+  background: #f06292;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header button {
+  background: white;
+  color: #f06292;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === Auth Page === */
+.auth-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-container {
+  max-width: 400px;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 12px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-container button {
+  background: linear-gradient(to right, #f06292, #ba68c8);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.auth-container button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* === Main Dashboard === */
+.welcome {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #ba68c8;
+  margin-bottom: 10px;
+}
+
+.card video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.quiz {
+  background: #f9f9ff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.quiz h4 {
+  margin-bottom: 1rem;
+}
+
+.quiz ul {
+  list-style: none;
+}
+
+.quiz li {
+  background: #eee;
+  padding: 10px 15px;
+  margin: 6px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quiz li:hover {
+  background: #ddd;
+}
+
+.quiz li.correct {
+  background-color: #a2f3a2 !important;
+}
+
+.quiz li.wrong {
+  background-color: #f8a2a2 !important;
+}
+
+/* === Score Summary === */
+.summary {
+  text-align: center;
+  margin-top: 3rem;
+  background: #fff3fc;
+  padding: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.summary h2 {
+  margin-bottom: 0.5rem;
+  color: #880e4f;
+}
+
+/* === Congrats Popup === */
+.congrats-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff3fc;
+  color: #6a1b9a;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  animation: popUp 0.4s ease-in-out;
+}
+
+.congrats-popup button {
+  background: #f06292;
+  color: white;
+  border: none;
+  margin-left: 1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.congrats-popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Certificate Page === */
+.certificate-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.certificate-box {
+  border: 3px dashed #ba68c8;
+  padding: 3rem;
+  border-radius: 20px;
+  background: white;
+  max-width: 600px;
+  margin: auto;
+}
+
+.certificate-box h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6a1b9a;
+}
+
+.certificate-box p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .card {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .auth-container {
+    margin: 60px 20px;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate - Hamster Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="certificate-container">
+    <div class="certificate-box">
+      <h1>🎓 Certificate of Completion</h1>
+      <p>This is to proudly certify that</p>
+      <h2 id="studentName">[Student Name]</h2>
+      <p>has successfully completed the course at</p>
+      <h3>🐹 Hamster Academy</h3>
+      <p>Congratulations on your achievement!</p>
+    </div>
+  </div>
+
+  <script>
+    const name = localStorage.getItem("hamsterUser");
+    const scores = JSON.parse(localStorage.getItem("quizScores"));
+
+    if (!name || !scores || scores.attempted < 3) {
+      alert("You must complete all quizzes to view your certificate.");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("studentName").textContent = name;
+    }
+  </script>
+</body>
+</html>
